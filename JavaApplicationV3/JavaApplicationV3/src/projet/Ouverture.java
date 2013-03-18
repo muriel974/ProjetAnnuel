@@ -211,18 +211,18 @@ public class Ouverture extends javax.swing.JFrame {
 	if (returnVal == JFileChooser.APPROVE_OPTION) {
             path = jFileChooser2.getSelectedFile().getName();
             System.out.println("OK ! Fichier : " + jFileChooser2.getSelectedFile().getAbsoluteFile());
-            try {
+            //try {
                 new Webphone(path, name).setVisible(true);
-            } catch (FileNotFoundException ex) {
+            /*} catch (FileNotFoundException ex) {
                 Logger.getLogger(Ouverture.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
                 Logger.getLogger(Ouverture.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
             this.setVisible(false);
         }
         else if (returnVal == JFileChooser.CANCEL_OPTION) {
             System.out.println("CANCEL");
-        }			
+        }		
     }//GEN-LAST:event_buttonOpenOpActionPerformed
 
     private void jFileChooser2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileChooser2ActionPerformed
@@ -238,13 +238,13 @@ public class Ouverture extends javax.swing.JFrame {
         int r;
         st = JOptionPane.showInputDialog(null, "Indiquez le nom du projet?", st);
         if(st != null) {
-            try {
+            //try {
                 new Webphone(st, name).setVisible(true);
-            } catch (FileNotFoundException ex) {
+            /*} catch (FileNotFoundException ex) {
                 Logger.getLogger(Ouverture.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
                 Logger.getLogger(Ouverture.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }*/
         }
         
     }//GEN-LAST:event_buttonNewOpActionPerformed
