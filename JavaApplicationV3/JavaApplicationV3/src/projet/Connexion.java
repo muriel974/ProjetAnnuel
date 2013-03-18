@@ -202,12 +202,16 @@ public class Connexion extends javax.swing.JFrame implements KeyListener {
     private void buttonValidateCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonValidateCoActionPerformed
         login = textfieldLoginCo.getText();
         password = passwordFieldCo.getText();
+        
+        open();
+        
+        /*      Connections, a regler plus tard
         if (connect(login, password)){
             open();
         }
         else{
             JOptionPane.showMessageDialog(this, "Erreur de connexion");
-        }
+        }*/
     }//GEN-LAST:event_buttonValidateCoActionPerformed
 
     private void buttonCancelCoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCancelCoActionPerformed
