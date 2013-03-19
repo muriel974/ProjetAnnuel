@@ -81,7 +81,7 @@ public class Webphone extends javax.swing.JFrame {
 
     
     private JWindow window;
-    private int x,y,h1,h2 = 0;
+    private int x,y,h1,h2,h3 = 0;
     
     
     public Webphone() {
@@ -1207,19 +1207,26 @@ if ( Desktop.isDesktopSupported() ) {
     }//GEN-LAST:event_checkBoxFooterWpActionPerformed
 
     private void sliderHeightHeaderWpStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderHeightHeaderWpStateChanged
-        h2=0;
-        h2=sliderHeightHeaderWp.getValue();
+              
+        /*** Slider Header ***/
+        
+       h2=sliderHeightHeaderWp.getValue();
         panelBlocHeaderWp.setSize(100,h2);
         panelBlocNordWp.setSize(200, h2);
+        
+        
     }//GEN-LAST:event_sliderHeightHeaderWpStateChanged
 
     private void tabbedPanelHeaderWpStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tabbedPanelHeaderWpStateChanged
 
-        y=tabbedPanelHeaderWp.getSelectedIndex();
+        /*** Tabbed HEADER ***/
         
+        
+        y=tabbedPanelHeaderWp.getSelectedIndex();
+       
         if(y==0){   // Onglet positon
         h2=sliderHeightHeaderWp.getValue();
-        System.out.println(h2);
+        System.out.println("Slider valeur = " + h2);
         panelBlocHeaderWp.setSize(100,h2);
         panelBlocNordWp.setSize(200, h2);
         /*** Probleme lorsqu'on change d'onglet le bloc header reprend sa taille d'origine ***/
@@ -1227,18 +1234,24 @@ if ( Desktop.isDesktopSupported() ) {
         }
         if(y==1){   // Onglet taille
             
-            System.out.println("Onglet taille");
-            
+        System.out.println("Onglet taille");
+        h2=sliderHeightHeaderWp.getValue();
+        System.out.println("Slider valeur = " + h2);
+        panelBlocHeaderWp.setSize(100,h2);
+        panelBlocNordWp.setSize(200, h2); 
+        /*** Probleme lorsqu'on change d'onglet le bloc header reprend sa taille d'origine ***/
+        validate();
         }
 
     }//GEN-LAST:event_tabbedPanelHeaderWpStateChanged
 
     private void sliderHeightFooterWpStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliderHeightFooterWpStateChanged
         
-        h2=0;
-        h2=sliderHeightFooterWp.getValue();
-        panelBlocFooterWp.setSize(100,h2);
-        panelBlocSudWp.setSize(200, h2);
+        /*** Slider Footer ***/
+        
+        h3=sliderHeightFooterWp.getValue();
+        panelBlocFooterWp.setSize(100,h3);
+        panelBlocSudWp.setSize(200,h3);
                 
                 
     }//GEN-LAST:event_sliderHeightFooterWpStateChanged
