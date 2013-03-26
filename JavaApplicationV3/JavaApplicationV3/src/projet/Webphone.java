@@ -35,6 +35,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JWindow;
+import java.awt.print.*;
+import java.awt.print.PrinterException;
 
 class Fermeture implements WindowListener{
     @Override
@@ -187,8 +189,6 @@ public class Webphone extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Webphone");
         setBackground(new java.awt.Color(255, 255, 255));
-        setLocation(new java.awt.Point(100, 100));
-        setPreferredSize(new java.awt.Dimension(850, 580));
         setResizable(false);
 
         mainPanel.setBackground(new java.awt.Color(153, 153, 153));
@@ -322,7 +322,8 @@ public class Webphone extends javax.swing.JFrame {
                     .add(panelBlocBodyWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(panelBlocMenuWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(panelBlocSudWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                .add(panelBlocSudWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         buttonConvertWp.setBackground(new java.awt.Color(204, 204, 204));
@@ -362,7 +363,7 @@ public class Webphone extends javax.swing.JFrame {
         panelPositionHeaderWpLayout.setHorizontalGroup(
             panelPositionHeaderWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(org.jdesktop.layout.GroupLayout.TRAILING, panelPositionHeaderWpLayout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .add(comboBox2HeaderWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 186, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -371,7 +372,7 @@ public class Webphone extends javax.swing.JFrame {
             .add(panelPositionHeaderWpLayout.createSequentialGroup()
                 .add(18, 18, 18)
                 .add(comboBox2HeaderWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         tabbedPanelHeaderWp.addTab("Position", panelPositionHeaderWp);
@@ -396,7 +397,7 @@ public class Webphone extends javax.swing.JFrame {
                     .add(panelSizeHeaderWpLayout.createSequentialGroup()
                         .add(32, 32, 32)
                         .add(sliderHeightHeaderWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         panelSizeHeaderWpLayout.setVerticalGroup(
             panelSizeHeaderWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -404,7 +405,7 @@ public class Webphone extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(labelHeightHeaderWp)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(sliderHeightHeaderWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(sliderHeightHeaderWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                 .add(22, 22, 22))
         );
 
@@ -468,14 +469,14 @@ public class Webphone extends javax.swing.JFrame {
             .add(panelPositionBodyWpLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(comboBox2BodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 186, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         panelPositionBodyWpLayout.setVerticalGroup(
             panelPositionBodyWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(panelPositionBodyWpLayout.createSequentialGroup()
                 .add(15, 15, 15)
                 .add(comboBox2BodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         tabbedPaneBodyWp.addTab("Position", panelPositionBodyWp);
@@ -493,10 +494,10 @@ public class Webphone extends javax.swing.JFrame {
                 .add(panelSizeBodyWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(labelWidthBodyWp)
                     .add(sliderWidthBodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 89, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 10, Short.MAX_VALUE)
                 .add(panelSizeBodyWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(panelSizeBodyWpLayout.createSequentialGroup()
-                        .add(sliderHeightBodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .add(sliderHeightBodyWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
                         .add(10, 10, 10))
                     .add(panelSizeBodyWpLayout.createSequentialGroup()
                         .add(labelHeightBodyWp)
@@ -512,7 +513,7 @@ public class Webphone extends javax.swing.JFrame {
                 .add(panelSizeBodyWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(sliderWidthBodyWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(sliderHeightBodyWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         tabbedPaneBodyWp.addTab("Taille", panelSizeBodyWp);
@@ -548,7 +549,7 @@ public class Webphone extends javax.swing.JFrame {
                 .add(panelBodyWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                     .add(labelBodyWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .add(checkBoxBodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 9, Short.MAX_VALUE)
                 .add(tabbedPaneBodyWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -576,14 +577,14 @@ public class Webphone extends javax.swing.JFrame {
             .add(panelPositionMenuWpLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(comboBox2MenuWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 186, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         panelPositionMenuWpLayout.setVerticalGroup(
             panelPositionMenuWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(panelPositionMenuWpLayout.createSequentialGroup()
                 .add(16, 16, 16)
                 .add(comboBox2MenuWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         tabbedPaneMenuWp.addTab("Position", panelPositionMenuWp);
@@ -605,7 +606,7 @@ public class Webphone extends javax.swing.JFrame {
                 .add(panelSizeMenuWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(sliderHeightMenuWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 84, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(labelHeightMenuWp))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         panelSizeMenuWpLayout.setVerticalGroup(
             panelSizeMenuWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -615,7 +616,7 @@ public class Webphone extends javax.swing.JFrame {
                     .add(labelHeightMenuWp))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(panelSizeMenuWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(sliderHeightMenuWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .add(sliderHeightMenuWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
                     .add(sliderWidthMenuWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .add(18, 18, 18))
         );
@@ -682,14 +683,14 @@ public class Webphone extends javax.swing.JFrame {
             .add(panelPositionFooterWpLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(comboBox2FooterWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 186, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         panelPositionFooterWpLayout.setVerticalGroup(
             panelPositionFooterWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(panelPositionFooterWpLayout.createSequentialGroup()
                 .add(14, 14, 14)
                 .add(comboBox2FooterWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         tabbedPaneFooterWp.addTab("Position", panelPositionFooterWp);
@@ -714,7 +715,7 @@ public class Webphone extends javax.swing.JFrame {
                     .add(panelSizeFooterWpLayout.createSequentialGroup()
                         .add(27, 27, 27)
                         .add(sliderHeightFooterWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 83, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         panelSizeFooterWpLayout.setVerticalGroup(
             panelSizeFooterWpLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -722,7 +723,7 @@ public class Webphone extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(labelHeightFooterWp)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(sliderHeightFooterWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(sliderHeightFooterWp, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .add(18, 18, 18))
         );
 
@@ -847,7 +848,7 @@ public class Webphone extends javax.swing.JFrame {
                         .add(buttonShowCodeWp))
                     .add(labelLogoWp))
                 .add(22, 22, 22)
-                .add(jSeparator1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .add(jSeparator1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(mainPanelLayout.createSequentialGroup()
@@ -857,10 +858,10 @@ public class Webphone extends javax.swing.JFrame {
                         .add(23, 23, 23)
                         .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(panelMenuWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(panelFooterWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 151, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                    .add(panelBlocWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 299, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(11, 11, 11)
-                .add(buttonConvertWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 56, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(panelFooterWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 151, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(11, 11, 11)
+                        .add(buttonConvertWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 56, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(panelBlocWp, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 298, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(27, 27, 27))
         );
 
@@ -913,6 +914,11 @@ public class Webphone extends javax.swing.JFrame {
         menuOptionsWp.setText("Options");
 
         itemPrintWp.setText("Imprimer");
+        itemPrintWp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemPrintWpActionPerformed(evt);
+            }
+        });
         menuOptionsWp.add(itemPrintWp);
 
         itemResetWp.setText("Reinitialiser");
@@ -941,7 +947,7 @@ public class Webphone extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(mainPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
+            .add(mainPanel, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE)
         );
 
         pack();
@@ -980,7 +986,7 @@ public class Webphone extends javax.swing.JFrame {
     
     
     private void buttonShowCodeWpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonShowCodeWpActionPerformed
-       
+        
         String c=new String(textfieldURLWp.getText());
         String code = new String();
 
@@ -1255,6 +1261,35 @@ if ( Desktop.isDesktopSupported() ) {
                 
                 
     }//GEN-LAST:event_sliderHeightFooterWpStateChanged
+
+    private void itemPrintWpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemPrintWpActionPerformed
+  PrinterJob printJob = PrinterJob.getPrinterJob();
+ 
+                PageFormat pageFormat= new PageFormat();
+                 
+                if (pageFormat == null) pageFormat = printJob.defaultPage();
+ 
+                 //   printJob.setPrintable(panelBlocWp);
+     
+                if (printJob.printDialog()){
+ 
+                    try{
+ 
+                          printJob.print();
+                                 System.out.println("Impression en cours!");
+                      }catch (PrinterException e){
+ 
+                           e.printStackTrace();
+                           System.out.println("Impression en cours?");
+ 
+                        
+                      }
+ 
+                        
+ 
+                }
+           
+    }//GEN-LAST:event_itemPrintWpActionPerformed
      
     /**
      * @param args the command line arguments
