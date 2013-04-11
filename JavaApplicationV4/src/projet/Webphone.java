@@ -2,13 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-/**ça marche?!!!!!
 
-	bande de cacas
 
- *ouiiii
-
- * @author Clement
+ /* @author Clement
  */
 
 package projet;
